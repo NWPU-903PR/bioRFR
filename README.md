@@ -10,12 +10,17 @@ The data used in our paper is available at [Google Driver](https://drive.google.
 ## Directory Tree
 ```
 ├─Algorithm                   (the code of biRFR framework)
+| ├─Parameter_calculate.m       (the function used to calculate status and resilience parameters)
+| ├─Estimate_landscape.m        (the function used to estimate potential landscape)
+| ├─Resilience_centrality.m     (the function used to calculate resilience centrality for each genes)
+| ├─computeGrid.m               (a internal function called by Estimate_landscape())
+| └─example.m                   (a sample script illustrates the workflow of bioRFR)
 ├─BiologicalAnalysis          (the code of biological analysis and figures plotting)
-| ├─PlotResilienceFunction.R    (Plotting the resilience function shown in Fig.3 in main text of paper)
-| ├─PredictSurvivalTime.R       (Analyzing the relationship between status parameter and survival time (Fig. 4))
-| ├─SurvivalAnalysis_KGs.R      (Survival Analysis based on KGs (Fig.5))
-| └─TopologicalDistance.R       (Calculating topological distance between iKGs and CGC genes)
-├─Data                        (The detail information about available data)
+| ├─PlotResilienceFunction.R    (plotting the resilience function shown in Fig.3 in main text of paper)
+| ├─PredictSurvivalTime.R       (analyzing the relationship between status parameter and survival time (Fig. 4))
+| ├─SurvivalAnalysis_KGs.R      (survival Analysis based on KGs (Fig.5))
+| └─TopologicalDistance.R       (calculating topological distance between iKGs and CGC genes)
+├─Data                        (the detail information about available data)
 ```
 
 ## How to use bioRFR
@@ -23,7 +28,7 @@ We provide a sample scrept [`Algorithm/example.m`](https://github.com/NWPU-903PR
 
 **1. Data preparation**
 
-bioRFR needs two gene expression matrix whose rows and columns represent genes and samples respectively. One of them contains reference samples (<exp_ref>) and the other consists with the remaining samples (<exp_other>).
+bioRFR needs two gene expression matrix whose rows and columns represent genes and samples respectively. One of them contains reference samples (`<exp_ref>`) and the other consists with the remaining samples (`<exp_other>`).
 
 **2. Calculating status and resilience parameters**
 
