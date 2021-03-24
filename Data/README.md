@@ -9,8 +9,10 @@ The following data is available at [Google Drive](https://drive.google.com/drive
 | └─Resilience_Centrality_Results    [the output of Resilience_centrality() for BRCA, LUAD and LUSC]
 ├─Others
 | ├─cancer_gene_census.csv           [Known driver genes from CGC]
-| └─fullNetwork.rda                  [the gene regulation network]
+| └─fullNetwork.rda                  [the gene regulation network*]
 ├─expN_<cancer_type>.csv           [the gene expression matrix of normal samples for specific <cancer_type>]
 └─expT_<cancer_type>.csv           [the gene expression matrix of tumor samples for specific <cancer_type>]
+
+* Hou, Jack P., and Jian Ma. "DawnRank: discovering personalized driver genes in cancer." Genome medicine 6.7 (2014): 1-16.
 
 ```
