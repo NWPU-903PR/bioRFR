@@ -52,5 +52,6 @@ In order to assess the importance of each gene for state transition of individua
 ```
 
 **5. Downstream biological analysis**
+
 Based on resilience function and personalized key genes (KGs), one can perform downstream biological analysis (see `BiologicalAnalysis\` as some examples).
 
