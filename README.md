@@ -15,12 +15,36 @@ The data used in our paper is available at [Google Driver](https://drive.google.
 | ├─PredictSurvivalTime.R       (Analyzing the relationship between status parameter and survival time (Fig. 4))
 | ├─SurvivalAnalysis_KGs.R      (Survival Analysis based on KGs (Fig.5))
 | └─TopologicalDistance.R       (Calculating topological distance between iKGs and CGC genes)
-├─Data                        (Detail information about available data)
+├─Data                        (The detail information about available data)
 ```
 
 ## How to use bioRFR
+We provide a sample scrept [`Algorithm/example.m`](https://github.com/NWPU-903PR/bioRFR/blob/master/Algorithm/example.m) which contains the complete workflow of bioRFR. In brief, it consists with the following steps.
 
-- Gene expression datasets for six cancer types: `expN_<cancer_type>.csv` and `expT_<cancer_type>.csv`
-- Status and resilience paramaters for each samples: `x_effN_<cancer_type>.csv`, `beta_effN_<cancer_type>.csv`, `x_effT_<cancer_type>.csv` and `betaT_eff_<cancer_type>.csv`
-- The maxima and minima value of landscape for each cancer type: `maxlocs_<cancer_type>.csv` and `minlocs_<cancer_type>.csv`
-- Resilience Centrality of each gene for every samples: `resN_beta_<cancer_type>.csv` and `resT_beta_<cancer_type>.csv`
+**1. Data preparation**
+
+bioRFR needs two gene expression matrix whose rows and columns represent genes and samples respectively. One of them contains reference samples (<exp_ref>) and the other consists with the remaining samples (<exp_other>).
+
+**2. Calculating status and resilience parameters**
+
+One can call the following function to calculate parameters for every samples:
+```matlab
+[x_effN,beta_effN,x_effT,beta_effT] = Parameter_calculate(<exp_ref>,<exp_other>,th);
+```
+
+**3. Estimation potential landscape**
+
+Based on the output of step 2, the potential landscape and corresponding minima and maxima can be estimate using `Estimate_landscape()` function.
+```matlab
+[minlocs,maxlocs] = Estimate_landscape(x_effN,beta_effN,x_effT,beta_effT,peakth);
+```
+
+**4. Calculation resilience centrality of each gene for every samples**
+
+In order to assess the importance of each gene for state transition of individual patient, the resilience centrality of each gene can be calculated using `Resilience_centrality()` function.
+```matlab
+[resN_beta,resT_beta] = Resilience_centrality(expN,expT,th);
+```
+
+**5. Downstream biological analysis**
+
