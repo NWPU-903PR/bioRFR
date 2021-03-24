@@ -28,7 +28,7 @@ We provide a sample scrept [`Algorithm/example.m`](https://github.com/NWPU-903PR
 
 **1. Data preparation**
 
-bioRFR needs two gene expression matrix whose rows and columns represent genes and samples respectively. One of them contains reference samples (`<exp_ref>`) and the other consists with the remaining samples (`<exp_other>`).
+bioRFR needs two gene expression matrix whose rows and columns represent genes and samples respectively. One of them contains reference samples `<exp_ref>` and the other consists with the remaining samples `<exp_other>`.
 
 **2. Calculating status and resilience parameters**
 
