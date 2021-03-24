@@ -9,18 +9,18 @@ The data used in our paper is available at [Google Driver](https://drive.google.
 
 ## Directory Tree
 ```
-├─Algorithm                   (the code of biRFR framework)
-| ├─Parameter_calculate.m       (the function used to calculate status and resilience parameters)
-| ├─Estimate_landscape.m        (the function used to estimate potential landscape)
-| ├─Resilience_centrality.m     (the function used to calculate resilience centrality for each genes)
-| ├─computeGrid.m               (a internal function called by Estimate_landscape())
-| └─example.m                   (a sample script illustrates the workflow of bioRFR)
-├─BiologicalAnalysis          (the code of biological analysis and figures plotting)
-| ├─PlotResilienceFunction.R    (plotting the resilience function shown in Fig.3 in main text of paper)
-| ├─PredictSurvivalTime.R       (analyzing the relationship between status parameter and survival time (Fig. 4))
-| ├─SurvivalAnalysis_KGs.R      (survival Analysis based on KGs (Fig.5))
-| └─TopologicalDistance.R       (calculating topological distance between iKGs and CGC genes)
-├─Data                        (the detail information about available data)
+├─Algorithm                   [the code of biRFR framework]
+| ├─Parameter_calculate.m       [the function used to calculate status and resilience parameters]
+| ├─Estimate_landscape.m        [the function used to estimate potential landscape]
+| ├─Resilience_centrality.m     [the function used to calculate resilience centrality for each genes]
+| ├─computeGrid.m               [a internal function called by Estimate_landscape()]
+| └─example.m                   [a sample script illustrates the workflow of bioRFR]
+├─BiologicalAnalysis          [the code of biological analysis and figures plotting]
+| ├─PlotResilienceFunction.R    [plotting the resilience function shown in Fig.3 in main text of paper]
+| ├─PredictSurvivalTime.R       [analyzing the relationship between status parameter and survival time (Fig. 4)]
+| ├─SurvivalAnalysis_KGs.R      [survival Analysis based on KGs (Fig.5)]
+| └─TopologicalDistance.R       [calculating topological distance between iKGs and CGC genes]
+├─Data                        [the detail information about available data]
 ```
 
 ## How to use bioRFR
