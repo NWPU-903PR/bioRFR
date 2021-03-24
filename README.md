@@ -5,7 +5,7 @@
 In this repository, we provide a MATLAB(R) package for reconstrusting resilience function of biological precesses from gene expression data and the code about biological analysis and figures plotting associated with the paper: *Resilience function uncovers the critical transitions in cancer initiation*.
 
 ## Data Available
-The data used in our paper is available at [Google Driver](https://drive.google.com/drive/folders/11VDCpGKDCT644WsrMZLJwQU2ChOEqzEc?usp=sharing). And the detail information can be found in [README](https://github.com/NWPU-903PR/bioRFR/blob/master/Data/README.md) file.
+The data used in our paper is available at [Google Drive](https://drive.google.com/drive/folders/11VDCpGKDCT644WsrMZLJwQU2ChOEqzEc?usp=sharing). And the detail information can be found in [README](https://github.com/NWPU-903PR/bioRFR/blob/master/Data/README.md) file.
 
 ## Directory Tree
 ```
