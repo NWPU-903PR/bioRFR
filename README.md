@@ -9,11 +9,17 @@ The data used in our paper is available at [Google Driver](https://drive.google.
 
 ## Directory Tree
 |-Algorithm                   (the code of biRFR framework)
+
 |-BiologicalAnalysis          (the code of biological analysis and figures plotting)
+
   |-PlotResilienceFunction.R  (Plotting the resilience function as shown in Fig.3 in main text of paper)
+
   |-PredictSurvivalTime.R     (Analyzing the relationship between status parameter and survival time (Fig. 4))
+
   |-SurvivalAnalysis_KGs.R    (Survival Analysis based on KGs (Fig.5))
+
   |-TopologicalDistance.R     (Calculating topological distance between iKGs and CGC genes)
+
 |-Data                        (Detail information about available data)
 
 ## How to use bioRFR
