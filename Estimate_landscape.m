@@ -18,7 +18,7 @@ function [minlocs,maxlocs] = Estimate_landscape(N_x,N_beta,T_x,T_beta,local_th)
     x2 = x2(:);
     xi = [x1 x2];
     [f,xi] = ksdensity([x,beta],xi);
-    [f_beta,x_beta] = ksdensity(beta,gridx2);
+    [f_beta,~] = ksdensity(beta,gridx2);
     f_beta = repmat(f_beta',100,1);
     f_beta(f_beta < 0.3) = 0.3;
     f = f ./ f_beta;
@@ -27,7 +27,7 @@ function [minlocs,maxlocs] = Estimate_landscape(N_x,N_beta,T_x,T_beta,local_th)
 
     minlocs = cell(500,1);
     for i = 1:500
-        [pks,locs,k,p] = findpeaks(-z(:,i));
+        [~,locs,~,p] = findpeaks(-z(:,i));
         minlocs{i} = locs(p >= local_th);
     end
     minlocs_temp = [];
@@ -43,7 +43,7 @@ function [minlocs,maxlocs] = Estimate_landscape(N_x,N_beta,T_x,T_beta,local_th)
 
     maxlocs = cell(500,1);
     for i = 1:500
-        [pks,locs,k,p] = findpeaks(z(:,i));
+        [~,locs,~,p] = findpeaks(z(:,i));
         maxlocs{i} = locs(p >= local_th);
     end
     maxlocs_temp = [];
