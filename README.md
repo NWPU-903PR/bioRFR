@@ -8,13 +8,13 @@ In this repository, we provide a MATLAB(R) package for reconstrusting resilience
 The data used in our paper is available at [Google Driver](https://drive.google.com/drive/folders/11VDCpGKDCT644WsrMZLJwQU2ChOEqzEc?usp=sharing). And the detail information can be found in [README](https://github.com/NWPU-903PR/bioRFR/blob/master/Data/README.md) file.
 
 ## Directory Tree
-```bash
+```
 ├─Algorithm                   (the code of biRFR framework)
 ├─BiologicalAnalysis          (the code of biological analysis and figures plotting)
-  ├─PlotResilienceFunction.R  (Plotting the resilience function as shown in Fig.3 in main text of paper)
-  ├─PredictSurvivalTime.R     (Analyzing the relationship between status parameter and survival time (Fig. 4))
-  ├─SurvivalAnalysis_KGs.R    (Survival Analysis based on KGs (Fig.5))
-  └─TopologicalDistance.R     (Calculating topological distance between iKGs and CGC genes)
+| ├─PlotResilienceFunction.R    (Plotting the resilience function shown in Fig.3 in main text of paper)
+| ├─PredictSurvivalTime.R       (Analyzing the relationship between status parameter and survival time (Fig. 4))
+| ├─SurvivalAnalysis_KGs.R      (Survival Analysis based on KGs (Fig.5))
+| └─TopologicalDistance.R       (Calculating topological distance between iKGs and CGC genes)
 ├─Data                        (Detail information about available data)
 ```
 
