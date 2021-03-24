@@ -2,11 +2,11 @@ options(stringsAsFactors = FALSE)
 library(ggplot2)
 
 # Setting work directory first
-work.dir <- '~/Cancer_Resilience/Program/Code/Data/'
+work.dir <- '~/bioRFR/Data/'
 setwd(work.dir)
 
-cancer.type <- 'LUSC'
-decision.sur <- 4.3  # Setting decision surface (see Table S3)
+cancer.type <- 'BRCA'
+decision.sur <- 3.6  # Setting decision surface (see Table S3)
 
 resN_x <- read.csv(paste('./Intermediate/Parameters_Results/x_effN_', cancer.type, 
                          '.csv', sep = ''), header = F)
@@ -46,7 +46,7 @@ ggplot() +
   labs(title = paste('Resilience function of ', cancer.type, sep = ''))
 
 # Plotting frequency distribution histogram of status parameter at beta = th +/- c. 
-# We set th = 7.8/8.2/8.7/9.2 respectively 
+# We set th = 7.8, 8.2, 8.7, 9.2 respectively 
 th <- 7.8
 c <- 0.2
 fre <- res_s[(log(res_s$beta_eff) > th - c) & (log(res_s$beta_eff) < th + c), ]

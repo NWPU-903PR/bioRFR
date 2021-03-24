@@ -2,7 +2,7 @@ options(stringsAsFactors = FALSE)
 library(ggplot2)
 
 # Setting work directory
-work.dir <- '~/Cancer_Resilience/Program/Code/Data/'
+work.dir <- '~/bioRFR/Data/'
 setwd(work.dir)
 
 outliers <- function(data) {
@@ -21,10 +21,9 @@ for (cancer.type in species) {
                               '.csv', sep = ''), header = F)
   resT_beta <- read.csv(paste('./Intermediate/Parameters_Results/beta_effT_', cancer.type, 
                               '.csv', sep = ''), header = F)
-  expT <- read.csv(paste('~/Cancer_Resilience/Program/matlab/all_exp/expT_', cancer.type, 
-                         '.csv', sep = ''),row.names = 1)
+  expT <- read.csv(paste('./expT_', cancer.type, '.csv', sep = ''), row.names = 1)
   
-  clinical.info <- read.delim(paste('~/Cancer_Resilience/Data/TCGA/nationwidechildrens.org_clinical_patient_',
+  clinical.info <- read.delim(paste('./Clinical_info/nationwidechildrens.org_clinical_patient_',
                                     tolower(cancer.type), '.txt', sep = ''))
   if (cancer.type == 'BRCA') {
     clinical.info <- clinical.info[clinical.info$vital_status == 'Dead', 

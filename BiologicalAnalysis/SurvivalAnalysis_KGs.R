@@ -4,7 +4,7 @@ library(survival)
 library(survminer)
 
 # Setting work directory first
-work.dir <- '~/Cancer_Resilience/Program/Code/Data/'
+work.dir <- '~/bioRFR/Data/'
 setwd(work.dir)
 
 # Specify the type of cancer to be analyzed (BRCA, LUAD or LUSC) and 

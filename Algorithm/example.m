@@ -34,7 +34,7 @@ fprintf(fid,'%d\n',beta_effT);
 fclose(fid);
 
 % Estimating system's potential landscape
-[minlocs,maxlocs] = Estimate_landscape(x_effN,beta_effN,x_effT,beta_effT,0.45);
+[minlocs,maxlocs] = Estimate_landscape(x_effN,beta_effN,x_effT,beta_effT,0.1);
 % Saving result
 fid = fopen(['../Data/Intermediate/Landscape_Results/minlocs_',...
     char(Cancer_type),'.csv'],'wt');
