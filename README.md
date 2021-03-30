@@ -2,7 +2,7 @@
 *by Yan Li (linay0124@outlook.com), Shaowu Zhang\* (zhangsw@nwpu.edu.cn)*
 
 ## Introduction
-In this repository, we provide a MATLAB(R) package for reconstrusting resilience function of biological precesses from gene expression data and the code about biological analysis and figures plotting associated with the paper: *Resilience function uncovers the critical transitions in cancer initiation*.
+In this repository, we provide a MATLAB(R) package for reconstructing resilience function of biological processes from gene expression data and the code about biological analysis and figures plotting associated with the paper: *Resilience function uncovers the critical transitions in cancer initiation*.
 
 ## Data Available
 The data used in our paper is available at [Google Drive](https://drive.google.com/drive/folders/11VDCpGKDCT644WsrMZLJwQU2ChOEqzEc?usp=sharing). And the detail information can be found in [README](https://github.com/NWPU-903PR/bioRFR/blob/master/Data/README.md) file.
@@ -24,7 +24,7 @@ The data used in our paper is available at [Google Drive](https://drive.google.c
 ```
 
 ## How to use bioRFR
-We provide a sample scrept [`Algorithm/example.m`](https://github.com/NWPU-903PR/bioRFR/blob/master/Algorithm/example.m) which contains the complete workflow of bioRFR. In brief, it consists with the following steps.
+We provide a sample script [`Algorithm/example.m`](https://github.com/NWPU-903PR/bioRFR/blob/master/Algorithm/example.m) which contains the complete workflow of bioRFR. In brief, it consists with the following steps.
 
 **1. Data preparation**
 

@@ -39,14 +39,14 @@ top_gene_beta <- lapply(resT_beta_topgene, get_top_gene, gene_name, th)
 gene.franq <- as.data.frame(table(unlist(top_gene_beta)))
 topgene <- gene.franq$Var1[order(gene.franq$Freq, decreasing = T)[1:200]]
 
-# Construction directed gene regulatory network and getting max commected component
+# Construction directed gene regulatory network and getting max connected component
 gene.regulation.net <- graph_from_adjacency_matrix(t(originalUnweighted), mode = 'directed')
 connected.components <- components(gene.regulation.net, 'weak')
 max.component <- induced_subgraph(gene.regulation.net, which(connected.components$membership == 
                                                                which(connected.components$csize ==
                                                                        max(connected.components$csize))))
 
-# Calculation topological avarage distance from CGC genes to iKGs
+# Calculation topological average distance from CGC genes to iKGs
 num <- length(which(igraph::vertex_attr(max.component,'name') %in% topgene))
 sp <- distances(max.component, which(vertex_attr(max.component,'name') %in% CGC.gene),
                 which(vertex_attr(max.component,'name') %in% topgene), 'out')
